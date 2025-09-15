@@ -1,16 +1,19 @@
+"use client";
+
 import AppChatInput from "@/components/AppChatInput";
 import AppHeader from "@/components/AppHeader";
-import Image from "next/image";
+import ChatContainer from "@/components/ChatContainer";
 
 export default function Home() {
   return (
-    <>
+    <div className="h-screen flex flex-col px-2">
       <AppHeader />
-      <div className="bg-gray-100 min-h-screen relative">
-        <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-10">
-        <AppChatInput />
+      <ChatContainer />
+      <div className="p-4 border-t border-gray-800">
+        <div className="max-w-4xl mx-auto">
+          <AppChatInput />
+        </div>
       </div>
-      </div>
-    </>
+    </div>
   );
 }
